@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+- '11'
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - node_modules
+before_install:
+- yarn update
+install:
+- yarn
+script:
+- yarn test
+- yarn coveralls
