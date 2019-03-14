@@ -1,6 +1,6 @@
 {
   "name": "postcss-scss-extract-library",
-  "version": "1.0.1-1.0.0-alpha.0.0",
+  "version": "1.0.2-alpha.0",
   "description": "PostCSS plugin to extract mixins, functions, imports",
   "main": "postcss-scss-extract-library.js",
   "scripts": {
