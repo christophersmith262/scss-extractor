@@ -1,8 +1,8 @@
 module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
-    'packages/**/*.{js}',
-    '!**/node_modules/**',
+    "packages/**/*.js",
+    "!**/test/lib/*.js",
   ],
   roots: [
     'packages/',
