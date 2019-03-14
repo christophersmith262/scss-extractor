@@ -63,7 +63,7 @@ parser.addArgument(
 parser.addArgument(
   ['-c', '--skip-comments'],
   {
-    help: 'Prevents comments from being inlined'
+    help: 'Prevents comments from being inlined',
     action: 'storeTrue',
     defaultValue: false,
     dest: 'skipComments',
