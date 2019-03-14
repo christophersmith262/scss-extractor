@@ -1,0 +1,25 @@
+{
+  "name": "postcss-scss-inline-comments",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to convert css comments to inline scss comments",
+  "main": "postcss-scss-inline-comments.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "convert",
+    "inline",
+    "comments"
+  ],
+  "author": "Christopher Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.3.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "postcss-scss": "^2.0.0"
+  }
+}

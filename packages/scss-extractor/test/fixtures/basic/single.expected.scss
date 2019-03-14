@@ -1,0 +1,7 @@
+@function test-function($color) {
+  @return $color;
+}
+
+@mixin test-mixin {
+  color: test-function(red);
+}

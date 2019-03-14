@@ -1,0 +1,8 @@
+@if $color == 'red' {
+  @charset 'UTF-8';
+}
+@else {
+  @media screen {
+    color: 'red';
+  }
+}

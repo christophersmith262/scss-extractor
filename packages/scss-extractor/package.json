@@ -1,0 +1,22 @@
+{
+  "name": "scss-extractor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "scss-extractor": "cli.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "postcss-scss": "^2.0.0"
+  }
+}

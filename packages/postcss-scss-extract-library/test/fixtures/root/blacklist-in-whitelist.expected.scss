@@ -1,0 +1,9 @@
+@mixin {
+  @media screen {
+    color: red;
+  }
+
+  .css-selector {
+    color: white;
+  }
+}

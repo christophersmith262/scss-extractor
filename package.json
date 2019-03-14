@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.3.1",
+    "lerna": "^3.13.1"
+  },
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "postcss-scss": "^2.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

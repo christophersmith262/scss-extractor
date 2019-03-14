@@ -1,0 +1,25 @@
+{
+  "name": "postcss-scss-import-rewrite",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to rewrite scss import statements",
+  "main": "postcss-scss-import-rewrite.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "import",
+    "scss",
+    "rewrite"
+  ],
+  "author": "Christopher Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.3.0"
+  },
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "postcss-scss": "^2.0.0"
+  }
+}

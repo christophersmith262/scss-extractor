@@ -1,0 +1,10 @@
+@if $color == 'red' {
+  .css-selector {
+    color: 'red';
+  }
+}
+@else {
+  .css-selector {
+    color: 'white';
+  }
+}

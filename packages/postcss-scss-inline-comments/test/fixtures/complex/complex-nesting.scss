@@ -1,0 +1,33 @@
+/**
+ * A mixin for generating a rule.
+ */
+@mixin test-mixin {
+
+  /**
+   * A function to help with something.
+   *
+   * @param {int} $a
+   *   The $a.
+   * @param {int} $b
+   *   The $b
+   *
+   * @return {bool}
+   *   true if $a is greater than $b, false otherwise.
+   */
+  @function greater($a, $b) {
+    // Check if a is greater than b
+    @return $a > $b;
+  }
+
+  .one-liner { color: red; /* Sets the color */ border: 1px; /* Add a border */ }
+
+  // Do some logic based on the function call.
+  @if (greater(2, 2)) {
+    /* all good here. */
+  }
+  @else { /* Never gets called */
+    /* If we get here, warn somebody */
+    @warn "how'd I get here?";
+  }
+
+}

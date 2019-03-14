@@ -1,0 +1,5 @@
+@mixin test-mixin {
+  @if $color == 'red' {
+    @warn 'bad color';
+  }
+}

@@ -1,0 +1,10 @@
+@if $color == 'red' {
+  @mixin test-mixin($color) {
+    color: 'red';
+  }
+}
+@else {
+  @function test-function($color) {
+    @return 'white';
+  }
+}

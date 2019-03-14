@@ -1,0 +1,4 @@
+@import 'a-package';
+@function b-package-function($color) {
+  @return $color;
+}

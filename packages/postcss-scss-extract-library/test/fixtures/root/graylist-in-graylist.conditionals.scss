@@ -1,0 +1,6 @@
+@if $color == 'red' {
+  $newcolor: 'red';
+}
+@else {
+  $newcolor: 'white';
+}

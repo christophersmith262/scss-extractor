@@ -1,0 +1,29 @@
+{
+  "name": "postcss-scss-node-sass-importer",
+  "version": "1.0.0",
+  "description": "PostCSS plugin to resolve imports with a node-sass importer plugin",
+  "main": "postcss-scss-node-sass-importer.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "import",
+    "scss",
+    "node",
+    "sass",
+    "importer"
+  ],
+  "author": "Christopher Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.3.0",
+    "npm-sass": "^2.3.0",
+    "postcss-import": "^12.0.1"
+  },
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "postcss-scss": "^2.0.0"
+  }
+}

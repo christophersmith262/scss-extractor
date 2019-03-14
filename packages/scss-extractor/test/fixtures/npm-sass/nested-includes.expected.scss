@@ -1,0 +1,6 @@
+@mixin a-package-mixin {
+  color: red;
+}
+@function b-package-function($color) {
+  @return $color;
+}

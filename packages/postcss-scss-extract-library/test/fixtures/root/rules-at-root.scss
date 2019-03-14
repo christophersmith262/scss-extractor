@@ -1,0 +1,11 @@
+.css-selector {
+  color: red;
+}
+
+.css-selector-parent {
+  color: white;
+
+  .css-selector-child {
+    color: blue;
+  }
+}
