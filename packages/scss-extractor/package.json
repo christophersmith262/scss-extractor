@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "scss-extractor": "cli.js"
+    "scss-extractor": "./bin/cli.js"
   },
   "directories": {
     "lib": "lib",
