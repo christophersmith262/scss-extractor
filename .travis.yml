@@ -1,17 +1,17 @@
 sudo: false
 language: node_js
 node_js:
-- '11'
+  - '11'
 branches:
   only:
-  - master
+    - master
 cache:
   directories:
-  - node_modules
+    - node_modules
 before_install:
-- yarn update
+  - yarn upgrade
 install:
-- yarn
+  - yarn
 script:
-- yarn test
-- yarn coveralls
+  - yarn test
+  - yarn coveralls
