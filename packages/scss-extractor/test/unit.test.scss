@@ -1,5 +1,0 @@
-const run = require('./lib/test-runner')('basic')
-
-test('Handles basic constructs', async () => {
-  await run("single")
-})

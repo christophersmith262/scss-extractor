@@ -5,7 +5,12 @@ const argparse = require('argparse'),
 
 var parser = new argparse.ArgumentParser({
   addHelp: true,
-  description: 'Extracts parts of an SCSS file to generate a new SCSS partial.',
+  prog: 'scss-extractor',
+  description: `
+    Extracts reusable sass components from a shared css library without
+    producing any duplicate css code between the shared library and the
+    compiled stylesheets that depend on it.
+  `
 })
 
 parser.addArgument(
@@ -27,7 +32,7 @@ parser.addArgument(
 parser.addArgument(
   ['-d', '--disallow'],
   {
-    help: 'The list of to ATRULES to explicitly remove',
+    help: 'The list of to ATRULES to explicitly remove. Defaults to any ATRULE resulting in css output',
     metavar: 'DISALLOW',
   }
 )
@@ -35,14 +40,14 @@ parser.addArgument(
 parser.addArgument(
   ['-i', '--importfilter'],
   {
-    help: 'A list of package patterns to include (will not be expanded)',
+    help: 'A list of import patterns to aggregate (uses the directory relative to the compiled file)',
     metavar: 'IMPORTFILTER',
     dest: 'importFilter',
   }
 )
 
 parser.addArgument(
-  ['-n', '--node-sass-importer'],
+  ['-s', '--node-sass-importer'],
   {
     help: 'The name of a package containing a node sass importer to use',
     metavar: 'NODESASSIMPORTER',
@@ -51,7 +56,7 @@ parser.addArgument(
 )
 
 parser.addArgument(
-  ['-f', '--fix-imports'],
+  ['-f', '--fix-broken-imports'],
   {
     help: 'Removes unresolvable @import statements',
     action: 'storeTrue',
@@ -61,15 +66,15 @@ parser.addArgument(
 )
 
 parser.addArgument(
-  ['-c', '--skip-comments'],
+  ['-n', '--normalize-imports'],
   {
-    help: 'Prevents comments from being inlined',
+    help: 'Collects imports at the top of the generated scss file',
     action: 'storeTrue',
     defaultValue: false,
-    dest: 'skipComments',
+    dest: 'normalizeImports',
   }
 )
 
-scssExtractor.run(parser.parseArgs()).then(result => {
+scssExtractor.runCli(parser.parseArgs()).then(result => {
   process.stdout.write(result.css)
 })

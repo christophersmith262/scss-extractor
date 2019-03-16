@@ -1,6 +1,6 @@
 const fs = require('fs'),
   path = require('path'),
-  run = require('../../index').run
+  run = require('../../index').runCli
 
 function norm(css) {
   return css.replace(/\s+/g, ' ').trim()
