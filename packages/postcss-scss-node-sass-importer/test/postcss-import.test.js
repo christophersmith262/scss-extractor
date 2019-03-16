@@ -1,6 +1,5 @@
 const postcss = require('postcss'),
   syntax = require('postcss-scss'),
-  atImport = require('postcss-import'),
   sassImporter = require('../postcss-scss-node-sass-importer'),
   runner = require('../../../test/lib/test-runner')
 
@@ -9,8 +8,7 @@ test('Finishes before postcss-import starts (single)', async () => {
       importer: (url, prev, done) => {
         done({ file: 'include-this' })
       },
-    }),
-    atImport()
+    })
   ])
 
   await run('single-import')
@@ -21,8 +19,7 @@ test('Finishes before postcss-import starts (multiple)', async () => {
       importer: (url, prev, done) => {
         done({ file: 'include-' + url })
       },
-    }),
-    atImport()
+    })
   ])
 
   await run('multiple-import')
@@ -34,7 +31,7 @@ test('Runs on postcss-import imported scss file', async () => {
       done({ file: 'multi-level.' + url })
     },
   })
-  const run = runner('postcss-import', [plugin, atImport({ plugins: [plugin] })], true)
+  const run = runner('postcss-import', [plugin], true)
 
   await run('multi-level')
 })
