@@ -7,10 +7,17 @@ module.exports = postcss.plugin('postcss-scss-import-rewrite', (opts) => {
     throw new Error("postcss-scss-import-rewrite requires a 'mutator' options entry.")
   }
 
-  return async css => {
-    let promises = []
+  return async (css, result) => {
+    let promise = Promise.resolve(),
+      atRules = []
 
     css.walkAtRules(node => {
+      atRules.push(node)
+    })
+
+    for (var i in atRules) {
+      let node = atRules[i]
+
       if (node.name == 'import') {
         let importpath = node.params,
           literal = false
@@ -24,19 +31,12 @@ module.exports = postcss.plugin('postcss-scss-import-rewrite', (opts) => {
           literal = true
         }
 
-        let promise = Promise.resolve(opts.mutator(importpath, node, literal))
-
-        promise.then(newpath => {
-          if (newpath !== undefined) {
-            node.params = node.params.replace(importpath, newpath)
-          }
-        })
-
-        promises.push(promise)
+        let newpath = await Promise.resolve(opts.mutator(importpath, node, literal, result))
+        if (newpath !== undefined) {
+          node.params = node.params.replace(importpath, newpath)
+        }
       }
-    })
-
-    return Promise.all(promises)
+    }
   }
 
 })
