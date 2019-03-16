@@ -10,13 +10,19 @@ module.exports = postcss.plugin('postcss-scss-inline-comments', () => {
       if (!comment.raws.inline) {
         // Each newline must be split out into a separate comma AST node,
         // otherwise only the first line gets commented out.
-        let lines = comment.text.split(/\r?\n/).map(line => {
+        let commentText = comment.raws.left
+          + comment.text
+          + comment.raws.right
+
+        let lines = commentText.split(/\r?\n/).map(line => {
+          let text = line.replace(/^\s*\*/, '').replace(/\s+$/, '')
+
           return new postcss.comment({
-            text: line.replace(/^\s*\*/, ''),
+            text: text,
             source: comment.source,
             raws: {
               inline: true,
-              left: comment.raws.left.replace(/\r?\n/g, ''),
+              left: '',
               before: comment.raws.before.replace(/\r?\n/g, ''),
               right: "\n",
               after: "",
@@ -26,24 +32,10 @@ module.exports = postcss.plugin('postcss-scss-inline-comments', () => {
 
         // Use the full left spacing of the original comment on the first
         // generated comment only.
-        lines[0].raws.left = comment.raws.left
         lines[0].raws.before = comment.raws.before
+        lines[lines.length - 1].raws.right = ""
 
-        // This is only here to make docblocs look a little better.
-        if (/\n/.test(comment.raws.right)) {
-          lines.push(new postcss.comment({
-            text: '',
-            source: comment.source,
-            raws: {
-              inline: true,
-              left: comment.raws.left.replace(/\r?\n/g, ''),
-              before: comment.raws.before.replace(/\r?\n/g, ''),
-              right: '',
-              after: '',
-            }
-          }))
-        }
-        else {
+        if (!/\n/.test(comment.raws.right)) {
           let eol = comment.raws.right.replace(/([ ]|\t)+$/, ''),
             bol = ''
 

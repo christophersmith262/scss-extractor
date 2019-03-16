@@ -73,3 +73,16 @@ test('Converts a function docbloc', async () => {
 }
 `)
 })
+
+test('Converts single asterisk docblocs', async () => {
+  const input = `
+/*
+ * Default Font Family Stacks
+ */
+`
+  expect(await process(input)).toBe(`
+//
+// Default Font Family Stacks
+//
+`)
+})
