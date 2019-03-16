@@ -40,7 +40,7 @@ module.exports = postcss.plugin('postcss-scss-extract-library', (opts) => {
         return true
       }
 
-      return node.parent ? hasAllowedAncestor(node.parent) : false
+      return hasAllowedAncestor(node.parent)
     }
 
     // Remove AST nodes that will result in css generation.
