@@ -6,4 +6,4 @@ Just give scss-extractor an entry point to sass code that is shared across multi
 
 This allows you to share precompiled core css across projects, while also providing a shared sass library.
 
-For documentation visit https://github.com/christophersmith262/scss-extractor
+For documentation visit [the scss-extractor repository](https://github.com/christophersmith262/scss-extractor).

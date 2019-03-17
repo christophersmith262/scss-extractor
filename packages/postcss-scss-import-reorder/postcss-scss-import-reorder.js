@@ -1,7 +1,6 @@
 const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-scss-import-reorder', (opts) => {
-  opts = opts || {};
+module.exports = postcss.plugin('postcss-scss-import-reorder', () => {
 
   function shouldSkip(node) {
     if (!node) {

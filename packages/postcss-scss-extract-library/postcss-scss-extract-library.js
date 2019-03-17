@@ -1,32 +1,13 @@
 const postcss = require('postcss')
 
-module.exports = postcss.plugin('postcss-scss-extract-library', (opts) => {
+const plugin = postcss.plugin('postcss-scss-extract-library', (opts) => {
   opts = opts || {}
 
   // These will never directly result in CSS generation.
-  const allowAll = opts.allowAll || ['mixin', 'function', 'import']
+  const allowAll = opts.allowAll || plugin.defaultAllowAll
 
   // All these directly result in CSS getting output on compilation.
-  const disallowAll = opts.disallowAll || [
-    'annotation',
-    'character-variant',
-    'charset',
-    'counter-style',
-    'document',
-    'font-face',
-    'font-feature-values',
-    'include',
-    'keyframes',
-    'media',
-    'namespace',
-    'ornaments',
-    'page',
-    'stylistic',
-    'stylesheet',
-    'supports',
-    'swash',
-    'viewport',
-  ]
+  const disallowAll = opts.disallowAll || plugin.defaultDisallowAll
 
   return async css => {
 
@@ -57,3 +38,28 @@ module.exports = postcss.plugin('postcss-scss-extract-library', (opts) => {
   }
 
 })
+
+plugin.defaultAllowAll = ['mixin', 'function', 'import']
+
+plugin.defaultDisallowAll = [
+  'annotation',
+  'character-variant',
+  'charset',
+  'counter-style',
+  'document',
+  'font-face',
+  'font-feature-values',
+  'include',
+  'keyframes',
+  'media',
+  'namespace',
+  'ornaments',
+  'page',
+  'stylistic',
+  'stylesheet',
+  'supports',
+  'swash',
+  'viewport',
+]
+
+module.exports = plugin
