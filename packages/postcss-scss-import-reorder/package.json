@@ -1,6 +1,6 @@
 {
   "name": "postcss-scss-import-reorder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PostCSS plugin to extract mixins, functions, imports",
   "main": "postcss-scss-import-reorder.js",
   "scripts": {

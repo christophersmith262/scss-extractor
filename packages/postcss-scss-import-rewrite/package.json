@@ -1,6 +1,6 @@
 {
   "name": "postcss-scss-import-rewrite",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PostCSS plugin to rewrite scss import statements",
   "main": "postcss-scss-import-rewrite.js",
   "scripts": {
