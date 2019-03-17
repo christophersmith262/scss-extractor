@@ -1,0 +1,17 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "examples/bolt/package.json",
+        "package.json",
+        "packages/postcss-scss-extract-library/package.json",
+        "packages/postcss-scss-import-dedup/package.json",
+        "packages/postcss-scss-import-reorder/package.json",
+        "packages/postcss-scss-import-rewrite/package.json",
+        "packages/postcss-scss-inline-comments/package.json",
+        "packages/postcss-scss-node-sass-importer/package.json",
+        "packages/scss-extractor/package.json"
+      ]
+    }
+  }
+}
