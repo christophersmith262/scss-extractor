@@ -8,13 +8,12 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "scss-extractor": "^1.0.2-alpha.4"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@bolt/core": "^2.3.0",
     "@bolt/global": "^2.3.0",
     "@bolt/sass-export-data": "^2.3.0",
-    "npm-sass": "^2.3.0"
+    "npm-sass": "^2.3.0",
+    "scss-extractor": "^1.0.2-alpha.1"
   }
 }

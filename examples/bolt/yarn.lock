@@ -1529,7 +1529,7 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-pify@^2.0.0:
+pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
   integrity sha1-7RQaasBDqEnqWISY59yosVMw6Qw=
@@ -1655,6 +1655,13 @@ react-is@^16.8.1:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
   integrity sha512-PVadd+WaUDOAciICm/J1waJaSvgq+4rHE/K70j0PFqKhkTBsPv/82UGQJNXAngz1fOQLLxI6z1sEDmJDQhCTAA==
+
+read-cache@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/read-cache/-/read-cache-1.0.0.tgz#e664ef31161166c9751cdbe8dbcf86b5fb58f774"
+  integrity sha1-5mTvMRYRZsl1HNvo28+GtftY93Q=
+  dependencies:
+    pify "^2.3.0"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
@@ -1801,13 +1808,14 @@ sass-graph@^2.2.4:
   version "0.3.2"
   resolved "https://codeload.github.com/at-import/Sassy-Maps/tar.gz/36008c57759562654caf938a93c874a9dbdd9d5e"
 
-scss-extractor@^1.0.2-alpha.4:
-  version "1.0.2-alpha.4"
-  resolved "https://registry.yarnpkg.com/scss-extractor/-/scss-extractor-1.0.2-alpha.4.tgz#937a951b99a67db99f1aa13fffc23261d36aa594"
-  integrity sha512-VE9+4B/jWiSj7eSID5NHN4iSVRDgQ3IbFDAoJpDtJhmYxxqc3Kb1opJArmmyhgYN0xEWF1ODiu1oi6p4HPMHTQ==
+scss-extractor@^1.0.2-alpha.1:
+  version "1.0.2-alpha.1"
+  resolved "https://registry.yarnpkg.com/scss-extractor/-/scss-extractor-1.0.2-alpha.1.tgz#8d2a2a8f2b6b1ba5f8c71b09e457969cc0e562cd"
+  integrity sha512-RaTJrwUQlduC6+vPii6bqR4IUHmoFGSNTV5eeHZT4Bwr8FTDO21bzmZ5fHWodBKAVI8x8seoWxBHGWqP3QgQ6A==
   dependencies:
     postcss "^7.0.14"
     postcss-scss "^2.0.0"
+    read-cache "^1.0.0"
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
