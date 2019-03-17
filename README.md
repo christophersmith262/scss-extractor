@@ -34,43 +34,140 @@ Then run the extractor on a scss file:
 scss-extractor inputfile.scss > _outputfile.scss
 ```
 
+Execute `scss-extractor --help` to get a list of command line options. Each command line options maps to an API option shown in the table below.
+
 ### As an API
+
+Example:
 
 ```
 const extractor = require('scss-extractor')
 
-extractor.run({ inputstring: "@mixin a-mixin() {}" }).then(result => {
+extractor.run("@mixin a-mixin() {}").then(result => {
   console.log(result)
 })
 ```
 
-### As a Gulp Plugin
-
-Install the gulp plugin with `yarn`:
+The extractor can be called programatically using either the generic run function as shown above:
 
 ```
-yarn add --dev gulp-scss-extractor
+<PostCSS.Result> async function run(<string> input, <Object> opts)
 ```
 
-Or `npm`:
+Or it can be called through the cli wrapper. The only difference is that the cli wrapper loads the file based on the `opts` array for you:
 
 ```
-npm install --save-dev gulp-scss-extractor
+<PostCSS.Result> async function runCli(<Object> opts)
 ```
 
-And add it to your gulp processing chain:
+Each function takes an opts array with configuration, and returns a PostCSS result object. The transformed scss is contained in `result.css`.
+
+### Options
+
+The following options can be provided either on the command line or through the `opts` array:
+
+-----------------------------
+#### `opts.inputFile`
+
+The path to the scss entrypoint. If this is not provided, imports will be resolved using `process.cwd()` as the root path.
+
+**Default:** `null`
+
+**Command Line Argument:** `<1>`
+
+-----------------------------
+#### `opts.importFilter `
+
+Filters which sass imports are aggregated. The
+value being filtered is the path to the resolved
+import relative to `inputFile`.
+
+**Default:** `null`
+
+**Command Line Argument:** `-i, --importfilter=...`
+
+**Examples:**
+
+This will expand `@my-org/...` imports only.
+
+*Command Line Example:* `--importfilter=^node_modules/@my-org`
+*API Example*: `{ importfilter: '^node_modules/@my-org' }`
+
+-----------------------------
+#### `opts.importer `
+
+This option is not available on a cli. It allows
+you to swap the importer with any node-sass
+compatible importer.
+
+**Default:** `require('npm-sass').importer`
+
+-----------------------------
+#### `opts.fixImports `
+
+
+This will discard any unresolvable imports
+from the generated sass partial.
+
+**Default:** `false`
+
+**Command Line Argument:** `-f, --fix-imports`
+
+-----------------------------
+#### `opts.extract `
+
+Atrules in the allowed list will be extracted
+into the generated sass partial.
+
+**Default:** `['mixin', 'function', 'import']`
+
+**Command Line Argument:** `-e <atrules>, --extract=<atrules>`
+
+-----------------------------
+#### `opts.disallow `
+
+Atrules in the disallow list will be completely
+removed from the generated sass partial upon
+
+encounter. This is generally reserved for
+anything that would generate css output if
+compiled.
+
+**Default:**
 
 ```
-const scssExtractor = require('gulp-scss-extractor')
-
-gulp.task('extract-scss-library', () => {
-  gulp.src('./inputfile.scss')
-  	.pipe(scssExtractor)
-  	.pipe(gulp.dest('./_outputfile.scss'))
-})
+[
+  'annotation',
+  'character-variant',
+  'charset',
+  'counter-style',
+  'document',
+  'font-face',
+  'font-feature-values',
+  'include',
+  'keyframes',
+  'media',
+  'namespace',
+  'ornaments',
+  'page',
+  'stylistic',
+  'stylesheet',
+  'supports',
+  'swash',
+  'viewport',
+]
 ```
 
-See more options in the [gulp-scsss-extract readme]().
+**Command Line Argument:** `-d <atrules>, --disallow=<atrules>`
+
+-----------------------------
+#### `opts.normalizeImports `
+
+Collects the imports that did not pass the
+`importFilter` at the top of the file.
+
+**Default:** `false`
+**Command Line Argument:** `-n, --normalize-imports`
 
 ### As a Library of postcss Plugins
 
@@ -87,4 +184,4 @@ The scss-extractor package is built on the postcss project. It provides several 
 - [postcssscss-scss-inline-comments]():
   Convert css comments to inline scss comments.
 - [postcssscss-scss-node-sass-importer]():
-  Applies a node-sass importer plugin to resolve `@import` statements.
+  Applies a node-sass importer plugin to resolve and load `@import` statements.
