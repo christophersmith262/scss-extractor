@@ -1809,9 +1809,9 @@ sass-graph@^2.2.4:
   resolved "https://codeload.github.com/at-import/Sassy-Maps/tar.gz/36008c57759562654caf938a93c874a9dbdd9d5e"
 
 scss-extractor@^1.0.2-alpha.1:
-  version "1.0.2-alpha.1"
-  resolved "https://registry.yarnpkg.com/scss-extractor/-/scss-extractor-1.0.2-alpha.1.tgz#8d2a2a8f2b6b1ba5f8c71b09e457969cc0e562cd"
-  integrity sha512-RaTJrwUQlduC6+vPii6bqR4IUHmoFGSNTV5eeHZT4Bwr8FTDO21bzmZ5fHWodBKAVI8x8seoWxBHGWqP3QgQ6A==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/scss-extractor/-/scss-extractor-1.0.2.tgz#dedfe700dbe503a75f92b4771b93b2761628e26c"
+  integrity sha512-uUxaIEgMBlMl9pNcv/80z6gRlz64+1avDD/ggucG29tb4FMHSRwBUvq/sWqw4cXAypoYlMU+EHrO+mlgiMFoEQ==
   dependencies:
     postcss "^7.0.14"
     postcss-scss "^2.0.0"
