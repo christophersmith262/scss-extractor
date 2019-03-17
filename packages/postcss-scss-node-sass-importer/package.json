@@ -18,12 +18,13 @@
   "author": "Christopher Smith",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.3.0",
-    "npm-sass": "^2.3.0"
+    "jest": "^24.3.0"
   },
   "dependencies": {
     "postcss": "^7.0.14",
     "postcss-scss": "^2.0.0",
-    "read-cache": "^1.0.0"
+    "postcss-scss-import-rewrite": "^1.0.2",
+    "read-cache": "^1.0.0",
+    "npm-sass": "^2.3.0"
   }
 }
