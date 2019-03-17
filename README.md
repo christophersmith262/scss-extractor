@@ -173,15 +173,15 @@ Collects the imports that did not pass the
 
 The scss-extractor package is built on the postcss project. It provides several postcss plugins that can be used independently of the high level extractor API:
 
-- [postcssscss-scss-extract-library]():
+- [postcssscss-scss-extract-library](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-extract-library):
   Extract mixins, functions, variable definitions from scss.
-- [postcssscss-scss-import-dedup]():
+- [postcssscss-scss-import-dedup](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-import-dedup):
   Remove duplicate `@import` statements from scss.
-- [postcssscss-scss-import-reorder]():
+- [postcssscss-scss-import-reorder](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-import-reorder):
   Ensure all `@import` statements appear at the beginning of the scss file.
-- [postcssscss-scss-import-rewrite]():
+- [postcssscss-scss-import-rewrite](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-import-rewrite):
   Rewrite an `@import` statement based on a callback.
-- [postcssscss-scss-inline-comments]():
+- [postcssscss-scss-inline-comments](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-inline-comments):
   Convert css comments to inline scss comments.
-- [postcssscss-scss-node-sass-importer]():
+- [postcssscss-scss-node-sass-importer](https://github.com/christophersmith262/scss-extractor/tree/master/packages/postcss-scss-node-sass-importer):
   Applies a node-sass importer plugin to resolve and load `@import` statements.
