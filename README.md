@@ -2,7 +2,7 @@
 
   [![Build Status](https://travis-ci.org/christophersmith262/scss-extractor.svg?branch=master)](https://travis-ci.org/christophersmith262/scss-extractor)
   [![Coverage Status](https://coveralls.io/repos/github/christophersmith262/scss-extractor/badge.svg?branch=master)](https://coveralls.io/github/christophersmith262/scss-extractor?branch=master)
-  [![npm version](https://img.shields.io/npm/v/scss-extractor.svg?style=flat)](https://www.npmjs.com/package/scss-extractor)
+  [![npm version](https://img.shields.io/npm/v/scss-extractor.svg?style=flat)](https://www.npmjs.com/package/scss-extractor) [![Greenkeeper badge](https://badges.greenkeeper.io/christophersmith262/scss-extractor.svg)](https://greenkeeper.io/)
   
 Make sharing mixins, partials, and variables across web properties a breeze by effortlessly generating a shipable sass library for your design system.
 
