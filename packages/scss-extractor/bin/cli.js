@@ -14,7 +14,7 @@ var parser = new argparse.ArgumentParser({
 })
 
 parser.addArgument(
-  ['inputfile'],
+  ['inputFile'],
   {
     help: 'The .scss file entrypoint to read',
     metavar: 'INPUTFILE',
@@ -43,15 +43,6 @@ parser.addArgument(
     help: 'A list of import patterns to aggregate (uses the directory relative to the compiled file)',
     metavar: 'IMPORTFILTER',
     dest: 'importFilter',
-  }
-)
-
-parser.addArgument(
-  ['-s', '--node-sass-importer'],
-  {
-    help: 'The name of a package containing a node sass importer to use',
-    metavar: 'NODESASSIMPORTER',
-    dest: 'importer',
   }
 )
 

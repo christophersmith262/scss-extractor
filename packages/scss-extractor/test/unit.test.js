@@ -15,7 +15,7 @@ test('Respects normalizeImports=true', async () => {
 
 test('runCli errors if inputfile missing', async () => {
   await expect(api.runCli({})).rejects.toEqual(
-    new Error('No inputfile provided.')
+    new Error('No input file provided.')
   )
 })
 

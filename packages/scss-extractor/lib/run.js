@@ -14,8 +14,8 @@ module.exports = async function (input, opts) {
 
   let importFilter,
     importerPlugin = opts.importer || sass.importer,
-    inputfile = opts.inputfile || process.cwd(),
-    basepath = path.dirname(path.resolve(inputfile))
+    inputFile = opts.inputFile || process.cwd(),
+    basepath = path.dirname(path.resolve(inputFile))
 
   if (opts.importFilter) {
     importFilter = new RegExp(opts.importFilter)
@@ -46,5 +46,5 @@ module.exports = async function (input, opts) {
 
   plugins.push(extractor)
 
-  return postcss(plugins).process(input, { syntax: syntax, from: inputfile })
+  return postcss(plugins).process(input, { syntax: syntax, from: inputFile })
 }

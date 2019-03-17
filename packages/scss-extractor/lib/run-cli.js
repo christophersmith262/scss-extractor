@@ -2,9 +2,9 @@ const readCache = require('read-cache'),
   run = require('./run')
 
 module.exports = async (opts) => {
-  if (!opts.inputfile) {
-    throw new Error('No inputfile provided.')
+  if (!opts.inputFile) {
+    throw new Error('No input file provided.')
   }
 
-  return run(await readCache(opts.inputfile), opts)
+  return run(await readCache(opts.inputFile), opts)
 }

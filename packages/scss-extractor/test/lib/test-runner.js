@@ -18,7 +18,7 @@ module.exports = function(suite, normalize=false) {
       })
     })
 
-    opts.inputfile = testfile
+    opts.inputFile = testfile
 
     const result = await run(opts)
     if (normalize) {
