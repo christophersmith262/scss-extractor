@@ -1,6 +1,6 @@
 {
   "name": "postcss-scss-import-dedup",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PostCSS plugin to extract mixins, functions, imports",
   "main": "postcss-scss-import-dedup.js",
   "scripts": {
@@ -23,6 +23,6 @@
   "dependencies": {
     "postcss": "^7.0.14",
     "postcss-scss": "^2.0.0",
-    "postcss-scss-import-rewrite": "^1.0.3"
+    "postcss-scss-import-rewrite": "^1.0.4"
   }
 }

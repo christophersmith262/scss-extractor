@@ -1,6 +1,6 @@
 {
   "name": "scss-extractor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -19,11 +19,11 @@
     "argparse": "^1.0.10",
     "postcss": "^7.0.14",
     "postcss-scss": "^2.0.0",
-    "postcss-scss-extract-library": "^1.0.3",
-    "postcss-scss-import-dedup": "^1.0.3",
-    "postcss-scss-import-reorder": "^1.0.3",
-    "postcss-scss-inline-comments": "^1.0.3",
-    "postcss-scss-node-sass-importer": "^1.0.3",
+    "postcss-scss-extract-library": "^1.0.4",
+    "postcss-scss-import-dedup": "^1.0.4",
+    "postcss-scss-import-reorder": "^1.0.4",
+    "postcss-scss-inline-comments": "^1.0.4",
+    "postcss-scss-node-sass-importer": "^1.0.4",
     "read-cache": "^1.0.0"
   }
 }

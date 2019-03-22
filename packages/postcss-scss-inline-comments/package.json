@@ -1,6 +1,6 @@
 {
   "name": "postcss-scss-inline-comments",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "PostCSS plugin to convert css comments to inline scss comments",
   "main": "postcss-scss-inline-comments.js",
   "scripts": {
