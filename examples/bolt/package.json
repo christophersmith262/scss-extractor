@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {},
   "dependencies": {
-    "@bolt/core": "^2.3.0",
+    "@bolt/core": "^2.9.0",
     "@bolt/global": "^2.3.0",
     "@bolt/sass-export-data": "^2.3.0",
     "npm-sass": "^2.3.0",
