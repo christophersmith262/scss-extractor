@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "argparse": "^1.0.10",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.28",
     "postcss-scss": "^2.0.0",
     "postcss-scss-extract-library": "^1.0.4",
     "postcss-scss-import-dedup": "^1.0.4",
