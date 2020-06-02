@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "npm-sass": "^2.3.0",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.32",
     "postcss-scss": "^2.0.0",
     "postcss-scss-import-rewrite": "^1.0.4",
     "read-cache": "^1.0.0"
